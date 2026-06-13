@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "delta-engine"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4",
+    "mpmath>=1.3",
+]
+
+[tool.setuptools]
+packages = ["engine", "engine.conventions", "engine.numerics", "engine.process", "engine.volatility", "engine.structural", "engine.hazard", "engine.dependence", "engine.cascade", "engine.risk", "validation"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

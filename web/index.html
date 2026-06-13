@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DELTA Risk Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>DELTA Risk Dashboard</h1>
+      <p class="subtitle">Read-only view over precomputed engine artifacts.</p>
+    </header>
+
+    <main class="dashboard">
+      <section id="position-inspector" class="view">
+        <h2>Position Inspector</h2>
+        <table id="position-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Per-position values</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section id="survival-term-structure" class="view">
+        <h2>Survival and Term Structure</h2>
+        <div id="survival-charts"></div>
+      </section>
+
+      <section id="portfolio-risk" class="view">
+        <h2>Portfolio Risk</h2>
+        <dl id="risk-summary"></dl>
+        <div id="loss-histogram"></div>
+      </section>
+
+      <section id="contagion-map" class="view">
+        <h2>Contagion and Concentration</h2>
+        <div id="contribution-bars"></div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <span id="schema-version"></span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

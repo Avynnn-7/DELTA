@@ -1,0 +1,145 @@
+:root {
+  --background: #0e1116;
+  --panel: #161b22;
+  --border: #2d333b;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #4493f8;
+  --warning: #f0883e;
+  --bar: #3fb950;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+.page-header {
+  padding: 24px 32px 8px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px 32px 32px;
+}
+
+.view {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.view h2 {
+  margin: 0 0 14px;
+  font-size: 15px;
+  color: var(--accent);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 6px 16px;
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+
+dt {
+  color: var(--muted);
+}
+
+dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.chart-title {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 8px 0 4px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 120px 1fr max-content;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0;
+  font-size: 12px;
+}
+
+.bar-track {
+  background: #21262d;
+  border-radius: 3px;
+  overflow: hidden;
+  height: 14px;
+}
+
+.bar-fill {
+  background: var(--bar);
+  height: 100%;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.histogram-bar {
+  fill: var(--accent);
+}
+
+.marker-var {
+  stroke: var(--warning);
+  stroke-width: 1.5;
+}
+
+.marker-es {
+  stroke: var(--bar);
+  stroke-width: 1.5;
+}
+
+.page-footer {
+  padding: 0 32px 24px;
+  color: var(--muted);
+  font-size: 12px;
+}

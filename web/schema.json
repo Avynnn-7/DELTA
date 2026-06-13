@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "fields": {
+    "schema_version": "string",
+    "alpha": "number",
+    "value_at_risk": "number",
+    "expected_shortfall": "number",
+    "loss_distribution": "array<number>",
+    "loss_histogram": {
+      "edges": "array<number>",
+      "density": "array<number>"
+    },
+    "es_contributions": "array<number>",
+    "position_metrics": "map<string,array<number>>",
+    "survival_curves": "map<string,array<number>>",
+    "diagnostics": "map<string,number>",
+    "metadata": "map<string,scalar>"
+  },
+  "views": {
+    "position_inspector": [
+      "position_metrics"
+    ],
+    "survival_term_structure": [
+      "survival_curves"
+    ],
+    "portfolio_risk": [
+      "loss_histogram",
+      "value_at_risk",
+      "expected_shortfall",
+      "alpha"
+    ],
+    "contagion_map": [
+      "es_contributions"
+    ]
+  }
+}

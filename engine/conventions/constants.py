@@ -1,0 +1,12 @@
+DAYS_PER_YEAR = 365
+HOURS_PER_YEAR = 365 * 24
+MINUTES_PER_YEAR = 365 * 24 * 60
+SECONDS_PER_YEAR = 365 * 24 * 3600
+
+PERIODS_PER_YEAR = {
+    "annual": 1,
+    "daily": DAYS_PER_YEAR,
+    "hourly": HOURS_PER_YEAR,
+    "minutely": MINUTES_PER_YEAR,
+    "secondly": SECONDS_PER_YEAR,
+}
